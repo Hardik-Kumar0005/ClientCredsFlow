@@ -10,14 +10,17 @@ spring:
             client-id: test1
             client-secret: mSiLjKreBjx76nI5Uh9AoB6KXyE84mdx
             authorization-grant-type: client_credentials
+            provider: keycloak-client
             scope:
               - openid
         provider:
           keycloak-client:
             token-uri: http://localhost:8081/realms/test/protocol/openid-connect/token
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/test
 
 server:
   port: 8000
 
-resourceServerUri:
-  http://localhost:9000
+resourceServerUri: http://localhost:9000
