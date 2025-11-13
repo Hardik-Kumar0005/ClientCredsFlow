@@ -27,6 +27,8 @@ public class AuthService {
     }
 
     public String fetchData(){
+
+        //Client Creds Grant Flow
 //        var authRequest = OAuth2AuthorizeRequest
 //                .withClientRegistrationId("keycloak-client")
 //                .principal("self")
@@ -46,6 +48,8 @@ public class AuthService {
 //
 //        return rest.getBody();
 
+
+        //Token Propagation flow
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         String token = null;
