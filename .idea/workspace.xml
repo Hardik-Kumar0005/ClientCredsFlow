@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb0764e8-2fe6-43dd-b228-70a4af46d8a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="bb0764e8-2fe6-43dd-b228-70a4af46d8a4" name="Changes" comment="Refactor client to return response">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/hardik/client/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,8 +99,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762970613825</updated>
-      <workItem from="1762970618652" duration="7694000" />
+      <workItem from="1762970618652" duration="10925000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactor client to return response">
+      <option name="closed" value="true" />
+      <created>1762980782313</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762980782314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor client to return response" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor client to return response" />
   </component>
 </project>

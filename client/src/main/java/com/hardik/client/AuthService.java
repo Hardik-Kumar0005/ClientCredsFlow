@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.client.OAuth2AuthorizeRequest;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientManager;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,13 +27,32 @@ public class AuthService {
     }
 
     public String fetchData(){
-        var authRequest = OAuth2AuthorizeRequest
-                .withClientRegistrationId("keycloak-client")
-                .principal("self")
-                .build();
+//        var authRequest = OAuth2AuthorizeRequest
+//                .withClientRegistrationId("keycloak-client")
+//                .principal("self")
+//                .build();
+//
+//        var client = manager.authorize(authRequest);
+//        String token = client.getAccessToken().getTokenValue();
+//
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setBearerAuth(token);
+//
+//        var rest = restTemplate.exchange(
+//                resourceServerUri + "/resource",
+//                HttpMethod.GET,
+//                new HttpEntity<String>(headers),
+//                String.class);
+//
+//        return rest.getBody();
 
-        var client = manager.authorize(authRequest);
-        String token = client.getAccessToken().getTokenValue();
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        String token = null;
+
+        if(auth instanceof JwtAuthenticationToken jwtAuthenticationToken) {
+            token = jwtAuthenticationToken.getToken().getTokenValue();
+        }
 
         HttpHeaders headers = new HttpHeaders();
         headers.setBearerAuth(token);
@@ -42,5 +64,6 @@ public class AuthService {
                 String.class);
 
         return rest.getBody();
+
     }
 }
